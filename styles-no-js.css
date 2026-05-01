@@ -1,0 +1,304 @@
+/* Image assets expected at:
+   ./cas/images/yale-background.png
+   ./cas/images/favicon.ico
+   ./cas/images/yale-logo-sprite.svg
+   ./cas/images/error-icon.png
+*/
+
+:root {
+  --yale-blue: #00356b;
+  --yale-blue-dark: #033569;
+  --link-blue: #257bb2;
+  --page-blue: #9ab6d9;
+  --text: #000;
+  --border: #707070;
+  --panel: #ffffff;
+  --info: #efefef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: "Mallory-Book", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: var(--page-blue) url("./images/yale-background.png") top center repeat;
+}
+
+a {
+  color: var(--link-blue);
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #222;
+}
+
+.page-shell {
+  max-width: 970px;
+  margin: 4rem auto;
+  background: var(--panel);
+  border: 1px solid var(--yale-blue-dark);
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.page-header h1 {
+  margin: 0;
+  padding: 1.5rem 30px;
+  color: #fff;
+  background: var(--yale-blue-dark);
+  border: 1px solid var(--yale-blue-dark);
+  font-family: "YaleNew", Georgia, "Times New Roman", serif;
+  font-size: 2.4rem;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.top-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.top-links a {
+  display: inline-block;
+  padding: 0.5rem 30px;
+  color: #000;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.sign-in-panel {
+  order: 2;
+  padding: 30px;
+}
+
+.info-container {
+  order: 1;
+  align-self: start;
+  max-width: 476px;
+  margin: 30px;
+  padding: 30px;
+  background: var(--info);
+}
+
+h2 {
+  margin: 0 0 30px;
+  color: #2b6dbe;
+  font-family: "Mallory-Medium", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.7rem;
+}
+
+.info-container h2 {
+  margin: 0 0 20px;
+  color: #000;
+  font-family: "Mallory-Bold", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.info-container p {
+  margin: 0 0 1rem;
+}
+
+.info-container p:last-child {
+  margin-bottom: 0;
+}
+
+.info-container strong {
+  display: block;
+  margin-top: 15px;
+}
+
+.sign-in-form label {
+  display: block;
+  font-weight: bold;
+}
+
+#sign-in-title {
+  font-weight: 500;
+}
+
+.sign-in-form input {
+  display: block;
+  width: 100%;
+  margin: 0 0 2rem;
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  font: inherit;
+}
+
+.forgot-password {
+  display: block;
+  margin: 0 0 30px;
+  font-weight: bold;
+}
+
+.btn-submit {
+  min-width: 143px;
+  padding: 0.45rem 0.85rem;
+  color: #fff;
+  background: var(--yale-blue);
+  border: 1px solid var(--yale-blue);
+  border-radius: 0;
+  font: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+  color: var(--yale-blue);
+  background: #fff;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 0 15px;
+  padding: 1rem 0;
+  background: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-content p {
+  margin: 0;
+  padding-top: 0.6rem;
+  font-size: 14px;
+}
+
+.footer-image {
+  width: 115px;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-top: 0.6rem;
+}
+
+.footer-links a,
+.page-footer a {
+  color: #000;
+}
+
+.alert-danger {
+  border: 2px solid #bf0000;
+  color: #000;
+  background: #ffd2d2 url("./images/error-icon.png") center left 15px no-repeat;
+  border-radius: 0;
+  padding: 20px 20px 20px 65px;
+}
+
+@media (max-width: 767px) {
+  body {
+    background: #fff;
+    overflow-x: hidden;
+  }
+
+  .page-shell {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    padding-bottom: 5rem;
+  }
+
+  .page-header h1 {
+    padding: 1rem 30px 1rem 15px;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .top-links {
+    align-items: stretch;
+  }
+
+  .top-links a {
+    padding: 0.5rem 15px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sign-in-panel {
+    order: 1;
+    padding: 30px 30px 30px 15px;
+  }
+
+  .info-container {
+    order: 2;
+    max-width: none;
+    margin: 0 30px 30px 15px;
+    padding: 30px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  .sign-in-form label,
+  .info-container p {
+    font-size: 0.9rem;
+  }
+
+  .sign-in-form input {
+    margin-bottom: 15px;
+  }
+
+  .forgot-password {
+    margin-bottom: 20px;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    padding: 0;
+    background: var(--yale-blue-dark);
+    border-top: 1px solid var(--yale-blue-dark);
+  }
+
+  .footer-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+}

